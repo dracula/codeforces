@@ -1,118 +1,35 @@
-pre.prettyprint {
-    display: block !important;
-    background-color: #282A36 !important;
-}
-.prettyprint .nocode {
-    background-color: none !important;
-    color: #000 !important;
-}
-.prettyprint .str {
-    color: #F1FA8C !important;
-}
-.prettyprint .kwd {
-    color: #8BE9FD !important;
-    font-weight: bold !important;
-}
-.prettyprint .com {
-    color: #6272A4 !important;
-}
-.prettyprint .typ {
-    color: #8BE9FD !important;
-}
-.prettyprint .lit {
-    color: #50FA7B !important;
-}
-.prettyprint .pun {
-    color: #F8F8F2 !important;
-}
-.prettyprint .pln {
-    color: #fff !important;
-}
-.prettyprint .tag {
-    color: #F8F8F2 !important;
-    font-weight: bold !important;
-}
-.prettyprint .atn {
-    color: #8BE9FD !important;
-    font-weight: bold !important;
-}
-.prettyprint .atv {
-    color: #50FA7B !important;
-}
-.prettyprint .dec {
-    color: #8BE9FD !important;
-}
+/* Dracula theme for Google Prettify */
+pre.prettyprint { display: block; background-color: #282a36; color: #f8f8f2; }
+pre .nocode { background-color: none; color: #f8f8f2; }
+pre .str { color: #f1fa8c; } /* string - yellow */
+pre .kwd { color: #ff79c6; font-weight: bold; } /* keyword - pink */
+pre .com { color: #6272a4; } /* comment - purple */
+pre .typ { color: #8be9fd; } /* type - cyan */
+pre .lit { color: #bd93f9; } /* literal - light purple */
+pre .pun { color: #ffb86c; } /* punctuation - orange */
+pre .pln { color: #f8f8f2; } /* plaintext - light white */
+pre .tag { color: #ff79c6; font-weight: bold; } /* tag - pink */
+pre .atn { color: #50fa7b; font-weight: bold; } /* attribute name - green */
+pre .atv { color: #f1fa8c; } /* attribute value - yellow */
+pre .dec { color: #bd93f9; } /* decimal - light purple */
 
-/* Specify class=linenums on a .prettyprint to get line numbering */
-ol.linenums {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    color: #aeaeae !important;
-} /* IE indents via margin-left */
-li.L0,
-li.L1,
-li.L2,
-li.L3,
-li.L5,
-li.L6,
-li.L7,
-li.L8 {
-    list-style-type: none !important;
-}
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #6272a4; }
+/* IE indents via margin-left */
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 { list-style-type: none; }
 /* Alternate shading for lines */
-li.L1,
-li.L3,
-li.L5,
-li.L7,
-li.L9 {
-}
+li.L1, li.L3, li.L5, li.L7, li.L9 { background: #44475a; }
 
 @media print {
-    pre.prettyprint {
-        background-color: none !important;
-    }
-    .prettyprint .str,
-    code .str {
-        color: #060 !important;
-    }
-    .prettyprint .kwd,
-    code .kwd {
-        color: #006 !important;
-        font-weight: bold !important;
-    }
-    .prettyprint .com,
-    code .com {
-        color: #600 !important;
-        font-style: italic !important;
-    }
-    .prettyprint .typ,
-    code .typ {
-        color: #404 !important;
-        font-weight: bold !important;
-    }
-    .prettyprint .lit,
-    code .lit {
-        color: #044 !important;
-    }
-    .prettyprint .pun,
-    code .pun {
-        color: #440 !important;
-    }
-    .prettyprint .pln,
-    code .pln {
-        color: #000 !important;
-    }
-    .prettyprint .tag,
-    code .tag {
-        color: #006 !important;
-        font-weight: bold !important;
-    }
-    .prettyprint .atn,
-    code .atn {
-        color: #404 !important;
-    }
-    .prettyprint .atv,
-    code .atv {
-        color: #060 !important;
-    }
+  pre.prettyprint { background-color: none; }
+  pre .str, code .str { color: #f1fa8c; }
+  pre .kwd, code .kwd { color: #ff79c6; font-weight: bold; }
+  pre .com, code .com { color: #6272a4; font-style: italic; }
+  pre .typ, code .typ { color: #8be9fd; font-weight: bold; }
+  pre .lit, code .lit { color: #bd93f9; }
+  pre .pun, code .pun { color: #ffb86c; }
+  pre .pln, code .pln { color: #f8f8f2; }
+  pre .tag, code .tag { color: #ff79c6; font-weight: bold; }
+  pre .atn, code .atn { color: #50fa7b; }
+  pre .atv, code .atv { color: #f1fa8c; }
 }
