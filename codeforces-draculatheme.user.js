@@ -7,7 +7,7 @@
 // @match        http://codeforces.com/*
 // @match        https://calendar.google.com/calendar/embed*
 // @match        https://www.facebook.com/v2.8/plugins/like.php*
-// @resource     desertCSS  desert.css
+// @resource     draculaCSS  dracula.css
 // @resource     draculaEditorTheme https://raw.githubusercontent.com/ajaxorg/ace/62e8e9e4d3b21552dd83d454b7fd55d4981d096a/lib/ace/theme/dracula.css
 // @resource     draculathemecss draculatheme.css
 // @grant        GM_addStyle
@@ -44,10 +44,10 @@ div.logo-plus-button {
 	}
 
 	var style = GM_getResourceText("draculathemecss"),
-		desertCSS = GM_getResourceText("desertCSS");
+		draculaCSS = GM_getResourceText("draculaCSS");
 
 	GM_addStyle(style);
-	GM_addStyle(desertCSS);
+	GM_addStyle(draculaCSS);
 
 	// to avoid long FOUT duration
 	function applyFuncWhenElmLoaded(sel, func) {
