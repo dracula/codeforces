@@ -1,15 +1,15 @@
 // ==UserScript==
-// @name         Codeforces dark theme
-// @version      1.1.1
-// @description  dark theme for codeforces
-// @author       Gaurang Tandon
+// @name         Codeforces dracula theme
+// @version      1.0.0
+// @description  dracula theme for codeforces
+// @author       Sai Bulusu
 // @match        https://codeforces.com/*
 // @match        http://codeforces.com/*
 // @match        https://calendar.google.com/calendar/embed*
 // @match        https://www.facebook.com/v2.8/plugins/like.php*
 // @resource     desertCSS  desert.css
-// @resource     monokaiEditorTheme https://raw.githubusercontent.com/ajaxorg/ace/62e8e9e4d3b21552dd83d454b7fd55d4981d096a/lib/ace/theme/monokai.css
-// @resource     darkthemecss darktheme.css
+// @resource     draculaEditorTheme https://raw.githubusercontent.com/ajaxorg/ace/62e8e9e4d3b21552dd83d454b7fd55d4981d096a/lib/ace/theme/dracula.css
+// @resource     draculathemecss draculatheme.css
 // @grant        GM_addStyle
 // @grant        GM_getResourceText
 // @run-at       document-start
@@ -43,7 +43,7 @@ div.logo-plus-button {
 		return;
 	}
 
-	var style = GM_getResourceText("darkthemecss"),
+	var style = GM_getResourceText("draculathemecss"),
 		desertCSS = GM_getResourceText("desertCSS");
 
 	GM_addStyle(style);
@@ -96,19 +96,19 @@ div.logo-plus-button {
 	(function fixLavaMenu() {
 		applyFuncWhenElmLoaded(".second-level-menu-list li.backLava", function (elm) {
 			elm.style.backgroundImage =
-				"url(https://github.com/GaurangTandon/codeforces-darktheme/raw/master/imgs/lava-right2.png)";
+				"url(https://github.com/saibulusu/codeforces-draculatheme/raw/master/imgs/lava-right2.png)";
 			elm.firstElementChild.style.backgroundImage =
-				"url(https://github.com/GaurangTandon/codeforces-darktheme/raw/master/imgs/lava-left2.png)";
+				"url(https://github.com/saibulusu/codeforces-draculatheme/raw/master/imgs/lava-left2.png)";
 		});
 	})();
 
 	(function fixAceEditor() {
 		applyFuncWhenElmLoaded("#editor", function (elm) {
-			var monokaiEditorThemeCSS = GM_getResourceText("monokaiEditorTheme"),
+			var draculaEditorThemeCSS = GM_getResourceText("draculaEditorTheme"),
 				aceChromeClass = "ace-chrome";
-			GM_addStyle(monokaiEditorThemeCSS);
+			GM_addStyle(draculaEditorThemeCSS);
 			elm.classList.remove(aceChromeClass);
-			elm.classList.add("ace-monokai");
+			elm.classList.add("ace-dracula");
 
 			// using a mutationobserver to revert addition of class ace-chome
 			// goes into an infinite loop, presumably because the script run
