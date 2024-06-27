@@ -1,13 +1,25 @@
 :root {
     --backgroundGreyColor: #282A36;
     --tableGreyRow: #2e2e2e;
-    --whiteTextColor: rgb(200, 200, 200);
-    --inputBoxBackgroundBorderColor: #383838;
+    --whiteTextColor: #F8F8F2;
+    --inputBoxBackgroundBorderColor: #282A36;
     /* ever so slightly pinkish but does the job well.
     Decreasing lightness increases redness and increasing increases pinkness */
-    --redColorJustPassesA11Y: hsl(0, 100%, 64%);
+    --redColorJustPassesA11Y: #FF5555;
     --genericLinkBlueColor: #21b0fd;
-    --genericLinkVisitedBlueColor: #8ab1ff;
+    --genericLinkVisitedBlueColor: #8BE9FD;
+    
+    --draculaBackground: #282A36;
+    --draculaCurrentLine: #44475A;
+    --draculaForeground: #F8F8F2;
+    --draculaComment: #6272A4;
+    --draculaCyan: #8BE9FD;
+    --draculaGreen: #50FA7B;
+    --draculaOrange: #FFB86C;
+    --draculaPink: #FF79C6;
+    --draculaPurple: #BD93F9;
+    --draculaRed: #FF5555;
+    --draculaYellow: #F1FA8C;
 }
 
 /* BACKGROUND/BORDER COLOR CHANGES */
@@ -52,7 +64,7 @@ input[type="text"],
 #comment {
     background-color: var(--inputBoxBackgroundBorderColor) !important;
     border-color: var(--inputBoxBackgroundBorderColor) !important;
-    color: var(--whiteTextColor) !important;
+    color: var(--TextColor) !important;
 }
 
 td.dark,
@@ -93,7 +105,26 @@ img[src$="/ok-16x16.png"] {
 
 /* codeforces uses code.prettyprint element but desert.css looks for pre.prettyprint */
 pre {
-    background-color: #333 !important;
+    background-color: var(--draculaBackground) !important;
+}
+
+#program-source-text .kwd {
+    color: var(--draculaCyan);
+}
+#program-source-text .typ {
+    color: var(--draculaCyan);
+}
+#program-source-text .com {
+    color: var(--draculaPurple);
+}
+#program-source-text .str {
+    color: var(--draculaYellow);
+}
+#program-source-text .pun {
+    color: var(--draculaForeground);
+}
+#program-source-text .pln {
+    color: var(--draculaOrange);
 }
 
 /* in the test display for hacks like this one
@@ -117,7 +148,7 @@ table tr.highlighted-row td,
 
 .standings .cell-accepted,
 .standings .cell-accepted-locked {
-    color: rgb(78, 209, 253) !important;
+    color: var(--draculaGreen) !important;
 }
 
 /* the following two rules are for accessibility */
@@ -159,18 +190,18 @@ div.ttypography .tt,
 /* submissions page and contest front page */
 
 .problems tr.rejected-problem td.act {
-    background-color: #ffabab !important;
+    background-color: var(--draculaRed) !important;
 }
 
 .problems tr.accepted-problem td.act {
-    background-color: #b5fd95 !important;
+    background-color: var(--draculaGreen) !important;
 }
 .problems tr.rejected-problem td.id {
-    border-left-color: #ffabab !important;
+    border-left-color: var(--draculaRed) !important;
 }
 
 .problems tr.accepted-problem td.id {
-    border-left-color: #b5fd95 !important;
+    border-left-color: var(--draculaGreen) !important;
 }
 
 div.ttypography .MathJax {
@@ -195,7 +226,7 @@ table tbody tr th a img[alt^="Sort"] {
 
 /* completely solved contest */
 .datatable td.state[style^="background-color: rgb(212, 237, 201);"] {
-    background-color: #005a07 !important;
+    background-color: #50FA7B !important;
 }
 
 /* markitup topic editor, make header and tag input boxes white */
@@ -243,8 +274,17 @@ input[type="file"] {
 textarea[name="input"],
 textarea[name="output"],
 #sourceCodeTextarea {
-    background-color: #272822;
-    color: white;
+    background-color: var(--draculaBackground);
+}
+
+#editor {
+    background-color: var(--draculaBackground);
+}
+.ace_gutter-cell {
+    color: gray;   
+}
+.ace_gutter-layer {
+    background-color: var(--draculaBackground);
 }
 
 /* issues/#10 */
@@ -261,7 +301,11 @@ textarea[name="output"],
 /* new feature that highlights different test cases in problem page
    https://codeforces.com/problemset/problem/1721/A */
 .problem-statement .test-example-line-even {
-    background-color: #444 !important;
+    background-color: var(--draculaCurrentLine) !important;
+}
+
+.problem-statement .test-example-line-odd {
+    background-color: var(--draculaBackground) !important;
 }
 
 /* TEXT COLOR CHANGES */
@@ -363,7 +407,7 @@ div ul.menu-list li a:visited {
 
 /* hack to increase specificity */
 a.red-link[href^="/contestRegistration"] {
-    background-color: #9a0000 !important;
+    background-color: var(--draculaRed) !important;
     color: var(--whiteTextColor) !important;
 }
 
@@ -407,7 +451,7 @@ span.contest-state-regular,
 }
 
 .personal-sidebar div ul.propertyLinks li:nth-child(2) span[style*="green"] {
-    color: #00c700 !important;
+    color: #50FA7B !important;
 }
 
 .personal-sidebar div ul.propertyLinks li:nth-child(2) span:not([style*="green"]) {
@@ -415,7 +459,7 @@ span.contest-state-regular,
 }
 
 .fix-tag-topic-contrast span a {
-    color: white !important;
+    color: var(--draculaForeground) !important;
 }
 
 /* issues#6 */
@@ -478,7 +522,7 @@ span.user-admin,
 a.user-admin,
 span.user-black,
 a.user-black {
-    color: #fff !important;
+    color: var(--draculaForeground) !important;
 }
 
 /* tr for the rating tables page*/
@@ -500,7 +544,7 @@ a.user-legendary {
 tr.user-cyan td,
 span.user-cyan,
 a.user-cyan {
-    color: #01bdb2 !important;
+    color: var(--draculaCyan) !important;
 }
 
 tr.user-violet td,
@@ -519,7 +563,7 @@ a.user-gray {
 /* for example, goto any submission and press Compare
 https://codeforces.com/contest/1352/submission/79514097 */
 div.diffHtmlTarget pre.prettyprint del[style^="background:#ff8080"] {
-    background: #7b1313 !important;
+    background: var(--draculaRed) !important;
 }
 
 div.diffHtmlTarget pre.prettyprint ins[style^="background:#80ff80"] {
