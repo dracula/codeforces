@@ -1,47 +1,48 @@
+/* desert scheme ported from vim to google prettify */
 pre.prettyprint {
     display: block !important;
-    background-color: #282A36 !important;
+    background-color: #333 !important;
 }
 .prettyprint .nocode {
     background-color: none !important;
     color: #000 !important;
 }
 .prettyprint .str {
-    color: #F1FA8C !important;
-}
+    color: #ffa0a0 !important;
+} /* string  - pink */
 .prettyprint .kwd {
-    color: #8BE9FD !important;
+    color: #f0e68c !important;
     font-weight: bold !important;
 }
 .prettyprint .com {
-    color: #6272A4 !important;
-}
+    color: #87ceeb !important;
+} /* comment - skyblue */
 .prettyprint .typ {
-    color: #8BE9FD !important;
-}
+    color: #98fb98 !important;
+} /* type    - lightgreen */
 .prettyprint .lit {
-    color: #50FA7B !important;
-}
+    color: #cd5c5c !important;
+} /* literal - darkred */
 .prettyprint .pun {
-    color: #F8F8F2 !important;
-}
+    color: #fff !important;
+} /* punctuation */
 .prettyprint .pln {
     color: #fff !important;
-}
+} /* plaintext */
 .prettyprint .tag {
-    color: #F8F8F2 !important;
+    color: #f0e68c !important;
     font-weight: bold !important;
-}
+} /* html/xml tag    - lightyellow */
 .prettyprint .atn {
-    color: #8BE9FD !important;
+    color: #bdb76b !important;
     font-weight: bold !important;
-}
+} /* attribute name  - khaki */
 .prettyprint .atv {
-    color: #50FA7B !important;
-}
+    color: #ffa0a0 !important;
+} /* attribute value - pink */
 .prettyprint .dec {
-    color: #8BE9FD !important;
-}
+    color: #98fb98 !important;
+} /* decimal         - lightgreen */
 
 /* Specify class=linenums on a .prettyprint to get line numbering */
 ol.linenums {
