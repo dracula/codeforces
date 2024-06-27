@@ -7,3 +7,7 @@ A dracula theme for Codeforces. Repurposed [GaurangTandon/codeforces-darktheme](
 ![Home page](https://github.com/saibulusu/codeforces-draculatheme/blob/master/imgs/codeforces-screenshot.png)
 #### Problemset
 ![Problemset](https://github.com/saibulusu/codeforces-draculatheme/blob/master/imgs/codeforces-problemset-screenshot.png)
+
+TODO:
+Fix the color scheme for code editing & viewing sections within the website
+![Problemset](https://github.com/saibulusu/codeforces-draculatheme/blob/master/imgs/codeforces-code-screenshot.png)
