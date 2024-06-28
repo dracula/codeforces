@@ -106,22 +106,26 @@ pre {
     background-color: var(--draculaBackground) !important;
 }
 
-#program-source-text .kwd {
+.source-popup-source {
+    background-color: var(--draculaBackground) !important;
+}
+
+#program-source-text, .source-popup-source .kwd {
     color: var(--draculaCyan);
 }
-#program-source-text .typ {
+#program-source-text, .source-popup-source .typ {
     color: var(--draculaCyan);
 }
-#program-source-text .com {
+#program-source-text, .source-popup-source .com {
     color: var(--draculaPurple);
 }
-#program-source-text .str {
+#program-source-text, .source-popup-source .str {
     color: var(--draculaYellow);
 }
-#program-source-text .pun {
+#program-source-text, .source-popup-source .pun {
     color: var(--draculaForeground);
 }
-#program-source-text .pln {
+#program-source-text, .source-popup-source .pln {
     color: var(--draculaOrange);
 }
 
