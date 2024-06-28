@@ -1,5 +1,7 @@
 # Codeforces Dracula Theme
 
+[Install with Stylus](https://userstyles.world/api/style/16979.user.css)
+
 A Dracula theme for Codeforces. Repurposed [GaurangTandon/codeforces-darktheme](https://github.com/GaurangTandon/codeforces-darktheme) using the dracula theme palette. The intent with this repo is to use *stylus* rather than *Tampermonkey* as the dark theme repo does.
 
 ### Screenshots
