@@ -3,9 +3,7 @@
     --tableGreyRow: #2e2e2e;
     --whiteTextColor: #F8F8F2;
     --inputBoxBackgroundBorderColor: #282A36;
-    /* ever so slightly pinkish but does the job well.
-    Decreasing lightness increases redness and increasing increases pinkness */
-    --redColorJustPassesA11Y: #FF5555;
+
     --genericLinkBlueColor: #21b0fd;
     --genericLinkVisitedBlueColor: #8BE9FD;
     
@@ -108,22 +106,26 @@ pre {
     background-color: var(--draculaBackground) !important;
 }
 
-#program-source-text .kwd {
+.source-popup-source {
+    background-color: var(--draculaBackground) !important;
+}
+
+#program-source-text, .source-popup-source .kwd {
     color: var(--draculaCyan);
 }
-#program-source-text .typ {
+#program-source-text, .source-popup-source .typ {
     color: var(--draculaCyan);
 }
-#program-source-text .com {
+#program-source-text, .source-popup-source .com {
     color: var(--draculaPurple);
 }
-#program-source-text .str {
+#program-source-text, .source-popup-source .str {
     color: var(--draculaYellow);
 }
-#program-source-text .pun {
+#program-source-text, .source-popup-source .pun {
     color: var(--draculaForeground);
 }
-#program-source-text .pln {
+#program-source-text, .source-popup-source .pln {
     color: var(--draculaOrange);
 }
 
@@ -153,11 +155,11 @@ table tr.highlighted-row td,
 
 /* the following two rules are for accessibility */
 .standings .cell-challenged {
-    color: var(--redColorJustPassesA11Y) !important;
+    color: var(--draculaRed) !important;
 }
 
 .standings .cell-passed-system-test {
-    color: #00c700 !important;
+    color: var(--draculaGreen) !important;
 }
 
 /* improve contrast ratio on grey background */
@@ -167,7 +169,7 @@ blockquote {
 
 div.alert-success {
     color: #0f5711 !important;
-    background-color: #87df63 !important;
+    background-color: var(--draculaGreen) !important;
 }
 
 /* these are inline code blocks */
@@ -226,7 +228,7 @@ table tbody tr th a img[alt^="Sort"] {
 
 /* completely solved contest */
 .datatable td.state[style^="background-color: rgb(212, 237, 201);"] {
-    background-color: #50FA7B !important;
+    background-color: var(--draculaGreen) !important;
 }
 
 /* markitup topic editor, make header and tag input boxes white */
@@ -313,7 +315,7 @@ textarea[name="output"],
 /* the error that appears when you try to submit binary data (like pdf)
     to a problem */
 span.error {
-    color: var(--redColorJustPassesA11Y) !important;
+    color: var(--draculaRed) !important;
 }
 
 /* the "-> Attention" box on old problems like this one
@@ -538,7 +540,7 @@ span.user-red,
 a.user-red,
 span.user-legendary,
 a.user-legendary {
-    color: var(--redColorJustPassesA11Y) !important;
+    color: var(--draculaRed) !important;
 }
 
 tr.user-cyan td,
@@ -550,7 +552,13 @@ a.user-cyan {
 tr.user-violet td,
 span.user-violet,
 a.user-violet {
-    color: #ce8aff !important;
+    color: var(--draculaPurple) !important;
+}
+
+tr.user-green td,
+span.user-green,
+a.user-green {
+    color: var(--draculaGreen) !important;
 }
 
 tr.user-gray td,
