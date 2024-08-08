@@ -1,4 +1,4 @@
-# Codeforces Dracula Theme
+# Dracula for Codeforces
 
 [Install with Stylus](https://userstyles.world/api/style/16979.user.css)
 
