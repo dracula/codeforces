@@ -12,9 +12,9 @@ All instructions can be found at [draculatheme.com/codeforces](https://draculath
 
 This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/codeforces/graphs/contributors).
 
-| [![saibulusu](https://github.com/saibulusu.png?size=100)](https://github.com/saibulusu) |
-| --------------------------------------------------------------------------------------- |
-| [saibulusu](https://github.com/saibulusu)                                               |
+| [![saibulusu](https://github.com/saibulusu.png?size=75)](https://github.com/saibulusu) |
+| -------------------------------------------------------------------------------------- |
+| [saibulusu](https://github.com/saibulusu)                                              |
 
 ## Community
 
