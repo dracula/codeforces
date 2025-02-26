@@ -1,23 +1,23 @@
 :root {
-    --backgroundGreyColor: #282A36;
-    --tableGreyRow: #2e2e2e;
-    --whiteTextColor: #F8F8F2;
-    --inputBoxBackgroundBorderColor: #282A36;
+  --backgroundGreyColor: #282a36;
+  --tableGreyRow: #2e2e2e;
+  --whiteTextColor: #f8f8f2;
+  --inputBoxBackgroundBorderColor: #282a36;
 
-    --genericLinkBlueColor: #21b0fd;
-    --genericLinkVisitedBlueColor: #8BE9FD;
-    
-    --draculaBackground: #282A36;
-    --draculaCurrentLine: #44475A;
-    --draculaForeground: #F8F8F2;
-    --draculaComment: #6272A4;
-    --draculaCyan: #8BE9FD;
-    --draculaGreen: #50FA7B;
-    --draculaOrange: #FFB86C;
-    --draculaPink: #FF79C6;
-    --draculaPurple: #BD93F9;
-    --draculaRed: #FF5555;
-    --draculaYellow: #F1FA8C;
+  --genericLinkBlueColor: #21b0fd;
+  --genericLinkVisitedBlueColor: #8be9fd;
+
+  --draculaBackground: #282a36;
+  --draculaCurrentLine: #44475a;
+  --draculaForeground: #f8f8f2;
+  --draculaComment: #6272a4;
+  --draculaCyan: #8be9fd;
+  --draculaGreen: #50fa7b;
+  --draculaOrange: #ffb86c;
+  --draculaPink: #ff79c6;
+  --draculaPurple: #bd93f9;
+  --draculaRed: #ff5555;
+  --draculaYellow: #f1fa8c;
 }
 
 /* BACKGROUND/BORDER COLOR CHANGES */
@@ -30,28 +30,28 @@ body:not(.wysiwyg), /* wysiwyg is the textbox in the usertalk section, it's insi
 .datatable > div.dark, /* the heading Problems on /problemset page */
 #facebox .content,
 .talk-content div[id^="history-text-content"] {
-    /* any value above this starts to look greyish */
-    /* need to overwrite background property as well
+  /* any value above this starts to look greyish */
+  /* need to overwrite background property as well
         otherwise background-color gets overwritten */
-    background: var(--backgroundGreyColor) !important;
-    background-color: var(--backgroundGreyColor) !important;
+  background: var(--backgroundGreyColor) !important;
+  background-color: var(--backgroundGreyColor) !important;
 }
 
 .spoiler-content,
 .roundbox.highlight-blue {
-    background-color: hsl(240, 15%, 35%) !important;
+  background-color: hsl(240, 15%, 35%) !important;
 }
 
 .topic .content {
-    border-left-color: #999 !important;
+  border-left-color: #999 !important;
 }
 
 .comment-table {
-    border-color: grey !important;
+  border-color: grey !important;
 }
 
 div.ttypography .bordertable thead th:not(:last-child) {
-    border-right-color: #000;
+  border-right-color: #000;
 }
 
 .search,
@@ -60,33 +60,35 @@ input[name$="Difficulty"],
 input[type="text"],
 #title,
 #comment {
-    background-color: var(--inputBoxBackgroundBorderColor) !important;
-    border-color: var(--inputBoxBackgroundBorderColor) !important;
-    color: var(--TextColor) !important;
+  background-color: var(--inputBoxBackgroundBorderColor) !important;
+  border-color: var(--inputBoxBackgroundBorderColor) !important;
+  color: var(--TextColor) !important;
 }
 
 td.dark,
 td.dark div.dark,
 .ttypography tbody tr:hover td,
 .status-frame-datatable tr td.dark {
-    background-color: var(--tableGreyRow) !important;
+  background-color: var(--tableGreyRow) !important;
 }
 
 div.ttypography tbody tr:hover th {
-    color: black !important;
-    border-color: black !important;
+  color: black !important;
+  border-color: black !important;
 }
 
 /* disable link highlighting in attempt to improve readability */
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* if the image is transparent, it adds a white background to it to avoid messing
 up its colors with the black background
 only for logo headers in gyms, etc. */
-#header > div:first-child img, ._logo_div img, .sidebox img[alt="Logo"] {
-    background-color: white !important;
+#header > div:first-child img,
+._logo_div img,
+.sidebox img[alt="Logo"] {
+  background-color: white !important;
 }
 
 /* all codeforces system hosted images already
@@ -98,35 +100,46 @@ img[src^="//sta.codeforces.com"]:not(.ajax-loading-gif),
 /* these images are not served from above domain */
 img[src$="/lightning-16x16.png"],
 img[src$="/ok-16x16.png"] {
-    background-color: rgba(255, 255, 255, 0) !important;
+  background-color: rgba(255, 255, 255, 0) !important;
 }
 
 /* codeforces uses code.prettyprint element but desert.css looks for pre.prettyprint */
 pre {
-    background-color: var(--draculaBackground) !important;
+  background-color: var(--draculaBackground) !important;
 }
 
 .source-popup-source {
-    background-color: var(--draculaBackground) !important;
+  background-color: var(--draculaBackground) !important;
 }
 
-#program-source-text, .source-popup-source .kwd {
-    color: var(--draculaCyan);
+#program-source-text,
+.source-popup-source .kwd {
+  color: var(--draculaCyan);
 }
-#program-source-text, .source-popup-source .typ {
-    color: var(--draculaCyan);
+
+#program-source-text,
+.source-popup-source .typ {
+  color: var(--draculaCyan);
 }
-#program-source-text, .source-popup-source .com {
-    color: var(--draculaPurple);
+
+#program-source-text,
+.source-popup-source .com {
+  color: var(--draculaPurple);
 }
-#program-source-text, .source-popup-source .str {
-    color: var(--draculaYellow);
+
+#program-source-text,
+.source-popup-source .str {
+  color: var(--draculaYellow);
 }
-#program-source-text, .source-popup-source .pun {
-    color: var(--draculaForeground);
+
+#program-source-text,
+.source-popup-source .pun {
+  color: var(--draculaForeground);
 }
-#program-source-text, .source-popup-source .pln {
-    color: var(--draculaOrange);
+
+#program-source-text,
+.source-popup-source .pln {
+  color: var(--draculaOrange);
 }
 
 /* in the test display for hacks like this one
@@ -134,7 +147,7 @@ https://codeforces.com/contest/1092/hacks/511691/test */
 body > pre,
 /* for pre elements, on problems like 696B */
 div.ttypography pre {
-    color: var(--whiteTextColor) !important;
+  color: var(--whiteTextColor) !important;
 }
 
 /* during contest, own submissions's row needs to be highlighted */
@@ -145,90 +158,90 @@ table tr.highlighted-row td,
 .highlight-blue,
 /* You have a new message*/
 .lang-chooser div[style^="background-color: #EAF4FF;"] {
-    background-color: #13203a !important;
+  background-color: #13203a !important;
 }
 
 .standings .cell-accepted,
 .standings .cell-accepted-locked {
-    color: var(--draculaGreen) !important;
+  color: var(--draculaGreen) !important;
 }
 
 /* the following two rules are for accessibility */
 .standings .cell-challenged {
-    color: var(--draculaRed) !important;
+  color: var(--draculaRed) !important;
 }
 
 .standings .cell-passed-system-test {
-    color: var(--draculaGreen) !important;
+  color: var(--draculaGreen) !important;
 }
 
 /* improve contrast ratio on grey background */
 blockquote {
-    color: #a8a8a8 !important;
+  color: #a8a8a8 !important;
 }
 
 div.alert-success {
-    color: #0f5711 !important;
-    background-color: var(--draculaGreen) !important;
+  color: #0f5711 !important;
+  background-color: var(--draculaGreen) !important;
 }
 
 /* these are inline code blocks */
 div.ttypography .tt,
 .search-help code {
-    color: #fff !important;
-    border-color: #333 !important;
-    background-color: #333 !important;
+  color: #fff !important;
+  border-color: #333 !important;
+  background-color: #333 !important;
 }
 
 .sidebar-menu ul li {
-    border: none !important;
+  border: none !important;
 }
 
 .sidebar-menu ul li:hover {
-    border: 1px solid #2e2e2e !important;
-    background-color: #2e2e2e !important;
+  border: 1px solid #2e2e2e !important;
+  background-color: #2e2e2e !important;
 }
 
 /* submissions page and contest front page */
 
 .problems tr.rejected-problem td.act {
-    background-color: var(--draculaRed) !important;
+  background-color: var(--draculaRed) !important;
 }
 
 .problems tr.accepted-problem td.act {
-    background-color: var(--draculaGreen) !important;
+  background-color: var(--draculaGreen) !important;
 }
 .problems tr.rejected-problem td.id {
-    border-left-color: var(--draculaRed) !important;
+  border-left-color: var(--draculaRed) !important;
 }
 
 .problems tr.accepted-problem td.id {
-    border-left-color: var(--draculaGreen) !important;
+  border-left-color: var(--draculaGreen) !important;
 }
 
 div.ttypography .MathJax {
-    -webkit-filter: invert(1) !important;
-    filter: invert(1) !important;
+  -webkit-filter: invert(1) !important;
+  filter: invert(1) !important;
 }
 
 div.ttypography a:hover,
 div.ttypography a:focus {
-    background-color: #020466 !important;
+  background-color: #020466 !important;
 }
 
 table tbody tr th a img[alt^="Sort"] {
-    filter: invert(1);
+  filter: invert(1);
 }
 
 /* issues/#7, #28 */
 /* partially solved contest */
 .datatable td.state[style^="background-color: rgb(221, 238, 255);"] {
-    background-color: #4a4a4a !important;
+  background-color: #4a4a4a !important;
 }
 
 /* completely solved contest */
 .datatable td.state[style^="background-color: rgb(212, 237, 201);"] {
-    background-color: var(--draculaGreen) !important;
+  background-color: var(--draculaGreen) !important;
 }
 
 /* markitup topic editor, make header and tag input boxes white */
@@ -236,78 +249,78 @@ table tbody tr th a img[alt^="Sort"] {
 .miu-comment,
 input[name^="tag"].ac_input,
 .send-talk-form table .wysiwyg {
-    background-color: var(--inputBoxBackgroundBorderColor) !important;
-    border-color: var(--inputBoxBackgroundBorderColor) !important;
+  background-color: var(--inputBoxBackgroundBorderColor) !important;
+  border-color: var(--inputBoxBackgroundBorderColor) !important;
 }
 
 /* user search button */
 input[type="submit"],
 input[type="button"],
 input[type="file"] {
-    color: var(--whiteTextColor) !important;
-    background: #4f4f4f !important;
-    border-color: #4f4f4f !important;
+  color: var(--whiteTextColor) !important;
+  background: #4f4f4f !important;
+  border-color: #4f4f4f !important;
 }
 
 /* fix for google calendar */
 .CalendarPage_calendar {
-    filter: invert(90%) hue-rotate(180deg);
-    background: rgb(25, 25, 25);
+  filter: invert(90%) hue-rotate(180deg);
+  background: rgb(25, 25, 25);
 }
 
 .CalendarPage_calendar iframe {
-    margin-top: 0px !important;
+  margin-top: 0px !important;
 }
 
 /* topic editor */
 .miu-complete,
 .miu-comment,
 .send-talk-form table .wysiwyg {
-    background: #fff !important; /* #fff gets inverted */
-    filter: invert(90%) hue-rotate(180deg);
+  background: #fff !important; /* #fff gets inverted */
+  filter: invert(90%) hue-rotate(180deg);
 }
 
 /* fix CF logo's inverted colors */
 .miu-comment .markItUp .markItUpButton8 a,
 .miu-complete .markItUp .markItUpButton12 a {
-    filter: invert(90%) hue-rotate(180deg);
+  filter: invert(90%) hue-rotate(180deg);
 }
 
 textarea[name="input"],
 textarea[name="output"],
 #sourceCodeTextarea {
-    background-color: var(--draculaBackground);
+  background-color: var(--draculaBackground);
 }
 
 #editor {
-    background-color: var(--draculaBackground);
+  background-color: var(--draculaBackground);
 }
 .ace_gutter-cell {
-    color: gray;   
+  color: gray;
 }
 .ace_gutter-layer {
-    background-color: var(--draculaBackground);
+  background-color: var(--draculaBackground);
 }
 
 /* issues/#10 */
 .delete-resource-link,
 .close {
-    filter: invert(1);
-    background-color: #e0e0e0 !important;
+  filter: invert(1);
+  background-color: #e0e0e0 !important;
 }
 
 .close_image {
-    opacity: 0.7 !important;
+  opacity: 0.7 !important;
 }
 
 /* new feature that highlights different test cases in problem page
    https://codeforces.com/problemset/problem/1721/A */
 .problem-statement .test-example-line-even {
-    background-color: var(--draculaCurrentLine) !important;
+  background-color: var(--draculaCurrentLine) !important;
 }
 
 .problem-statement .test-example-line-odd {
-    background-color: var(--draculaBackground) !important;
+  background-color: var(--draculaBackground) !important;
 }
 
 /* TEXT COLOR CHANGES */
@@ -315,17 +328,17 @@ textarea[name="output"],
 /* the error that appears when you try to submit binary data (like pdf)
     to a problem */
 span.error {
-    color: var(--draculaRed) !important;
+  color: var(--draculaRed) !important;
 }
 
 /* the "-> Attention" box on old problems like this one
  https://codeforces.com/problemset/problem/4/C */
 .roundbox.highlight-blue .caption.titled {
-    color: #ddddee !important;
+  color: #ddddee !important;
 }
 
 .roundbox.highlight-blue .caption.titled + div {
-    color: rgb(230, 230, 230) !important;
+  color: rgb(230, 230, 230) !important;
 }
 
 /* always write most specific selector first in a chain of selectors
@@ -336,12 +349,12 @@ span.verdict-unsuccessful-challenge /* unsuccessful hacking attempt */,
 span.cell-rejected /* rejected indicator on contests' standings */,
 a:not([href]):not(.rated-user),
 a:link:not(.rated-user) {
-    color: var(--genericLinkBlueColor) !important;
+  color: var(--genericLinkBlueColor) !important;
 }
 
 /* all visited anchor elements  */
 a:visited:not(.rated-user) {
-    color: var(--genericLinkVisitedBlueColor) !important;
+  color: var(--genericLinkVisitedBlueColor) !important;
 }
 
 .info /* below the blog headings */,
@@ -366,117 +379,121 @@ span#u_0_4, /* fb text like plugin */
 /* on no connection page, only p and ul direct children are present #21 */
 body > p, body > ul
 /* #26 - score table on the right in contest page */ {
-    color: var(--whiteTextColor) !important;
+  color: var(--whiteTextColor) !important;
 }
 
 ul.second-level-menu-list li:hover a:hover {
-    color: #014486 !important;
+  color: #014486 !important;
 }
 
 ul.second-level-menu-list li:hover a:link {
-    color: #014486 !important;
+  color: #014486 !important;
 }
 
 li.selectedLava a:link {
-    color: #014486 !important;
+  color: #014486 !important;
 }
 
 ul.second-level-menu-list:hover li:hover:not(.selectedLava) + .selectedLava a:link
 /* ul.second-level-menu-list:hover li.selectedLava:not(:hover) a:link */ {
-    color: var(--genericLinkBlueColor) !important;
+  color: var(--genericLinkBlueColor) !important;
 }
 
 /* for problem tags on /problemset */
 a:link.notice {
-    color: #bababa !important;
+  color: #bababa !important;
 }
 
 /* the mathjax expressions that are
  denoted by images */
 .tex-formula {
-    filter: invert(1) hue-rotate(180deg);
+  filter: invert(1) hue-rotate(180deg);
 }
 
 div ul.menu-list li a:link,
 div ul.menu-list li a:visited {
-    color: white !important;
+  color: white !important;
 }
 
 /* on submissions page */
 .verdict-rejected {
-    color: lightblue !important;
+  color: lightblue !important;
 }
 
 /* hack to increase specificity */
 a.red-link[href^="/contestRegistration"] {
-    background-color: var(--draculaRed) !important;
-    color: var(--whiteTextColor) !important;
+  background-color: var(--draculaRed) !important;
+  color: var(--whiteTextColor) !important;
 }
 
 /* center a to fix formatting mishap as seen on https://codeforces.com/blog/entry/63505 and other related
  company posts */
 .topic .content center a {
-    color: var(--whiteTextColor) !important;
+  color: var(--whiteTextColor) !important;
 }
 
 .topic .title p {
-    color: rgb(94, 146, 255) !important;
+  color: rgb(94, 146, 255) !important;
 }
 
 .caption.titled,
 .contest-state-phase {
-    color: #91a5cd !important;
+  color: #91a5cd !important;
 }
 
 .input pre, .output pre,
 /* embedded submissions display */
 pre.input, pre.output, pre.answer, pre.checker, pre.diagnostics {
-    color: white !important;
+  color: white !important;
 }
 
 span.contest-state-regular,
 .countdown {
-    color: #bababa !important;
+  color: #bababa !important;
 }
 
 /* Datatables on Gym, Submissions, Friends list, etc.*/
 /* its background color shows up as borders of the table */
 .datatable,
 .status-frame-datatable {
-    color: var(--whiteTextColor) !important;
-    border-radius: 5px;
-    background-color: #585858 !important;
+  color: var(--whiteTextColor) !important;
+  border-radius: 5px;
+  background-color: #585858 !important;
 }
 
 .datatable td.state[style^="back"] .notice {
-    color: #cccccc !important;
+  color: #cccccc !important;
 }
 
 .personal-sidebar div ul.propertyLinks li:nth-child(2) span[style*="green"] {
-    color: #50FA7B !important;
+  color: #50fa7b !important;
 }
 
-.personal-sidebar div ul.propertyLinks li:nth-child(2) span:not([style*="green"]) {
-    color: #a8a8a8 !important;
+.personal-sidebar
+  div
+  ul.propertyLinks
+  li:nth-child(2)
+  span:not([style*="green"]) {
+  color: #a8a8a8 !important;
 }
 
 .fix-tag-topic-contrast span a {
-    color: var(--draculaForeground) !important;
+  color: var(--draculaForeground) !important;
 }
 
 /* issues#6 */
 #vote-list-filterDifficultyLowerBorder li a.vote-item:hover,
 #vote-list-filterDifficultyLowerBorder {
-    filter: invert(1) hue-rotate(180deg);
+  filter: invert(1) hue-rotate(180deg);
 }
 
 /* OTHER CHANGES */
 .roundbox {
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 .ttypography h5 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .roundbox-lt,
@@ -489,29 +506,29 @@ span.contest-state-regular,
 .datatable .rb,
 .datatable .ilt,
 .datatable .irt {
-    display: none !important;
+  display: none !important;
 }
 
 .bottom-links {
-    border-bottom-left-radius: 5px !important;
-    border-bottom-right-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
 }
 
 .second-level-menu-list li {
-    border-radius: 5px !important;
+  border-radius: 5px !important;
 }
 
 td.dark span[style^="color: #0000bb;"] {
-    color: #4e9fef !important;
+  color: #4e9fef !important;
 }
 
 .datatable td.state a[href$="standings"] {
-    color: #8cc3f9 !important;
+  color: #8cc3f9 !important;
 }
 
 /* gym pages */
 div.setting-name {
-    color: #6c8bcc !important;
+  color: #6c8bcc !important;
 }
 
 /* RATING COLOR CHANGES*/
@@ -524,14 +541,14 @@ span.user-admin,
 a.user-admin,
 span.user-black,
 a.user-black {
-    color: var(--draculaForeground) !important;
+  color: var(--draculaForeground) !important;
 }
 
 /* tr for the rating tables page*/
 tr.user-blue td,
 span.user-blue,
 a.user-blue {
-    color: #757dff !important;
+  color: #757dff !important;
 }
 
 /* for a11y contrast coloring */
@@ -540,44 +557,45 @@ span.user-red,
 a.user-red,
 span.user-legendary,
 a.user-legendary {
-    color: var(--draculaRed) !important;
+  color: var(--draculaRed) !important;
 }
 
 tr.user-cyan td,
 span.user-cyan,
 a.user-cyan {
-    color: var(--draculaCyan) !important;
+  color: var(--draculaCyan) !important;
 }
 
 tr.user-violet td,
 span.user-violet,
 a.user-violet {
-    color: var(--draculaPurple) !important;
+  color: var(--draculaPurple) !important;
 }
 
 tr.user-green td,
 span.user-green,
 a.user-green {
-    color: var(--draculaGreen) !important;
+  color: var(--draculaGreen) !important;
 }
 
 tr.user-gray td,
 span.user-gray,
 a.user-gray {
-    color: #8c8c8c !important;
+  color: #8c8c8c !important;
 }
 
 /* ins tag in compare window of submissions */
 /* for example, goto any submission and press Compare
 https://codeforces.com/contest/1352/submission/79514097 */
 div.diffHtmlTarget pre.prettyprint del[style^="background:#ff8080"] {
-    background: var(--draculaRed) !important;
+  background: var(--draculaRed) !important;
 }
 
 div.diffHtmlTarget pre.prettyprint ins[style^="background:#80ff80"] {
-    background: #004600 !important;
+  background: #004600 !important;
 }
+
 div.diffHtmlTarget pre.prettyprint ins[style^="background:#80ff80"] .lit {
-    /* tone down the red tokens in the green regions, to improve color contrast */
-    background: #ff9d9d !important;
+  /* tone down the red tokens in the green regions, to improve color contrast */
+  background: #ff9d9d !important;
 }
